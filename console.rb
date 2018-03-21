@@ -9,6 +9,10 @@ artist_options_hash1 = {'name'=>'Amanda Palmer'}
 artist1 = Artist.new(artist_options_hash1)
 artist1.save()
 
+artist_options_hash2 = {'name'=>'Beirut'}
+artist2 = Artist.new(artist_options_hash2)
+
+
 album_options_hash1 = {'title'=>'Who Killed Amanda Palmer', 'genre'=>'rock', 'artist_id'=>artist1.id}
 album1 = Album.new(album_options_hash1)
 album1.save()
@@ -31,6 +35,9 @@ p Artist.all()
 puts ""
 puts "List all albums by Amanda Palmer:"
 p artist1.get_albums()
+puts ""
+puts "List all albums by Beirut (there should be none):"
+p artist2.get_albums()
 puts ""
 puts "Display the album's artist:"
 p album2.get_artist()

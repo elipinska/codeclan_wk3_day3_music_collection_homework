@@ -20,6 +20,6 @@ Additionally it would be nice to be able to:
 
 * Edit Artists/Albums DONE
 * Delete Artists/Albums DONE
-* Find Artists/Albums by their ID
+* Find Artists/Albums by their ID DONE
 
 Remember to regularly git commit!
