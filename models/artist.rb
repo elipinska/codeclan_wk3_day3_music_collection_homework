@@ -51,10 +51,14 @@ class Artist
   end
 
   def delete()
-    sql = "DELETE FROM artists
-           WHERE id = $1;"
-    values = [@id]
-    SqlRunner.run(sql, values)
+     if get_albums().length != 0
+       p "Cannot delete artist before removing all of their albums first"
+       return
+    end
+      sql = "DELETE FROM artists
+             WHERE id = $1;"
+      values = [@id]
+      SqlRunner.run(sql, values)
   end
 
   def self.find_by_id(id)

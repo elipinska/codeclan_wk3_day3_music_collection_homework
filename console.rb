@@ -48,6 +48,10 @@ puts ""
 puts "Find artist by id:"
 p Artist.find_by_id(1)
 puts ""
+puts "Delete artist"
+artist1.delete()
+p Artist.all()
+puts ""
 puts "Delete one album:"
 album1.delete()
 p Album.all()
