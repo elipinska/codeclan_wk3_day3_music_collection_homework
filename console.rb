@@ -23,14 +23,32 @@ album1.update()
 artist1.name = 'AFP'
 artist1.update()
 
-
+puts "List all albums:"
 p Album.all()
 puts ""
+puts "List all artists:"
 p Artist.all()
 puts ""
+puts "List all albums by Amanda Palmer:"
 p artist1.get_albums()
 puts ""
+puts "Display the album's artist:"
 p album2.get_artist()
-
+puts ""
+puts "Find album by id:"
+p Album.find_by_id(1)
+puts ""
+puts "Find artist by id:"
+p Artist.find_by_id(1)
+puts ""
+puts "Delete one album:"
 album1.delete()
 p Album.all()
+puts ""
+puts "Delete second album:"
+album2.delete()
+p Album.all()
+puts ""
+puts "Delete artist:"
+artist1.delete()
+p Artist.all()
