@@ -31,3 +31,6 @@ puts ""
 p artist1.get_albums()
 puts ""
 p album2.get_artist()
+
+album1.delete()
+p Album.all()
